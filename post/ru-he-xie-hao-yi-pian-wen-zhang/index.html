@@ -1,13 +1,20 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" >
+
 <title>如何写好一篇文章？ | Gridea</title>
-<link rel="shortcut icon" href="https://kitenote.github.io/favicon.ico?v=1590210569435">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://kitenote.github.io/favicon.ico?v=1590210793458">
 <link rel="stylesheet" href="https://kitenote.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="如何写好一篇文章？ | Gridea - Atom Feed" href="https://kitenote.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
 
@@ -15,82 +22,81 @@
 转自知乎 戴蒙德 https://zhuanlan.zhihu.com/p/32898022
 写作也一年有余，我却时常感到自己的文章水平与一年之前没有质的飞跃。和很多在学习写作的朋友一样，都多少遇到过问题：语言匮乏、缺少素材、词不达意、没..." />
     <meta name="keywords" content="" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://kitenote.github.io">
-  <img class="avatar" src="https://kitenote.github.io/images/avatar.png?v=1590210569435" alt="">
-  </a>
-  <h1 class="site-title">
-    Gridea
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://kitenote.github.io">
+        <img src="https://kitenote.github.io/images/avatar.png?v=1590210793458" class="site-logo">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
       
-        <a href="/" class="menu">
-          首页
-        </a>
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
       
-    
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
       
-        <a href="/archives" class="menu">
-          归档
-        </a>
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
       
-    
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
       
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
+    </div>
   </div>
-  <div class="social-container">
-    
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://kitenote.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
   </div>
 </div>
 
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              如何写好一篇文章？
-            </h2>
-            <div class="post-info">
-              <span>
-                2020-05-23
-              </span>
-              <span>
-                8 min read
-              </span>
-              
-            </div>
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">如何写好一篇文章？</h2>
+            <div class="post-date">2020-05-23</div>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <figure data-type="image" tabindex="1"><img src="https://pic2.zhimg.com/v2-72a1e736fa7d9bc95fc9f627a902712b_1200x500.jpg" alt="如何写好一篇文章？" loading="lazy"></figure>
+            <div class="post-content" v-pre>
+              <figure data-type="image" tabindex="1"><img src="https://pic2.zhimg.com/v2-72a1e736fa7d9bc95fc9f627a902712b_1200x500.jpg" alt="如何写好一篇文章？" loading="lazy"></figure>
 <p>转自知乎 <a href="https://www.zhihu.com/people/dai-meng-de-72">戴蒙德</a> <a href="https://zhuanlan.zhihu.com/p/32898022">https://zhuanlan.zhihu.com/p/32898022</a></p>
 <p>写作也一年有余，我却时常感到自己的文章水平与一年之前没有质的飞跃。和很多在学习写作的朋友一样，都多少遇到过问题：语言匮乏、缺少素材、词不达意、没有读者，等等。</p>
 <p>和那些从小饱读诗书，酷爱文学作品，并且经过系统写作学习的人相比，大部分人缺少机会去接受系统化的写作训练。在自我摸索的过程中，免不了碰壁，确实不知道该如何去写好文章。</p>
@@ -168,83 +174,45 @@
 <p>大量的阅读经典，充分地发挥想象力，坚持反复的修改，你一定能写出优秀的作品。</p>
 <p>转自知乎 <a href="https://www.zhihu.com/people/dai-meng-de-72">戴蒙德</a> <a href="https://zhuanlan.zhihu.com/p/32898022">https://zhuanlan.zhihu.com/p/32898022</a></p>
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li><a href="#%E4%B8%80"><strong>（一）</strong></a></li>
-<li><a href="#%E4%BA%8C"><strong>（二）</strong></a></li>
-<li><a href="#%E4%B8%89"><strong>（三）</strong></a></li>
-<li><a href="#%E5%9B%9B"><strong>（四）</strong></a></li>
-<li><a href="#%E4%BA%94"><strong>（五）</strong></a></li>
-</ul>
-
-              </div>
             </div>
-          </article>
-        </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://kitenote.github.io/post/sui-bi/">
+                  <h3 class="post-title">
+                    随笔
+                  </h3>
+                </a>
+              </div>
+            
 
-        
-          <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://kitenote.github.io/post/sui-bi/">
-              <h3 class="post-title">
-                随笔
-              </h3>
-            </a>
+            
+
           </div>
-        
 
-        
-
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-  <a class="rss" href="https://kitenote.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
-</div>
-
+        </div>
       </div>
     </div>
 
-    <script>
-      hljs.initHighlightingOnLoad()
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+AOS.init();
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
+</script>
 
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
 
-    </script>
+
+
+
+
   </body>
 </html>
